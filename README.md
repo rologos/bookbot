@@ -1,2 +1,3 @@
 # bookbot
-a python script to analize word and letter counter in books
+
+BookBot is my first [Boot.dev](https://www.boot.dev) project!
