@@ -1,6 +1,6 @@
 def count_words(contents):
     words = contents.split()
-    print (f"{len(words)} words found in the document")
+    print (f"Found {len(words)} total words")
 
 def count_characters(contents):
     alphabet = {
@@ -44,8 +44,10 @@ def sort_on(items):
 def sort_dict (count_dict):
     dict_list=[]
     for char,num in count_dict.items():
-        dict_list.append({"char":item,"num":item.value})
+        dict_list.append({"char":char,"num":num})
 
-    dick_list.sort(reverse=True,key=sort_on)
+    dict_list.sort(reverse=True,key=sort_on)
 
-    return dict_list
+    for item in dict_list:
+        if item["char"].isalpha():
+            print(f"{item['char']}: {item['num']}")
